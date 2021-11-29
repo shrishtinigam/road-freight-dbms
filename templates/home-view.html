@@ -1,10 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>Road Freight Transport System</h1>
+{% load static %}
+<link rel="stylesheet" href={% static 'home-view.css' %}>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
 <body>
-    
+{% csrf_token %}
+<div><form action='' method="post">
+    <button id='home' class="custom-btn btn" name="home" type="submit">HOME</button>
+    <div>
+        <center><h1 id="main"> Road Freight Transport System </h1></center>
+        <center><p class="intro">RFTS is a revolutionary Free Web Service in Goods Carriage Systems, brought to you with fresh feel and introspection! <br><br> We at RFTS, aim to deliver the best in class integrity services to give a boost to your business outstripping any possibilities of SCAMS. </p></center>
+        <center><p class="intro">Our Partners and Associates are committed to excellence and give a new dimension to this area of interest. <br><br>We propose easier access to live detect your exports and imports, with high-end security of your transactions just at your finger-tips.....</p></center>
+    </div>
+    <div>
+        <center><h2 id = "group">Please select your group</h2></center>
+    </div>
+    <center>
+        <button class="custom-btn btn btn-1" name="login_sender" type="submit">SENDER</button>
+		<button class="custom-btn btn btn-2" name="login_truck" type="submit">TRUCK OWNER</button>
+        <button class="custom-btn btn btn-3" name="login_receiver" type="submit">RECEIVER</button>
+    </center>
+	</form></div>
+
 </body>
 
 {% endblock content %}
