@@ -1,10 +1,8 @@
 from django.db import models
-
+from sender.models import Sender
 # Create your models here.
 
 class Driver(models.Model):
-    sender_id = models.CharField(max_length=45,  primary_key=True)
-    driver_id = models.CharField(max_length=45)
-
-    class Meta:
-        unique_together = (('sender_id', 'driver_id'),) 
+    driver = models.CharField(max_length=45,  primary_key=True) # driver_id
+    sender = models.ForeignKey(Sender, on_delete=models.CASCADE) # sender_id
+    

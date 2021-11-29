@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'truck_owner',
     'transaction',
     'trucks',
-    'appoints',
 ]
 
 MIDDLEWARE = [
